@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 
 import com.alibaba.android.vlayout.DelegateAdapter;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
@@ -27,8 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         //开始
-        DelegateAdapter delegateAdapter = new DelegateAdapter(layoutManager, false);
-        mRecyclerView.setAdapter(delegateAdapter);
+//        LayoutInflater layoutManager = LayoutInflater.from(MainActivity.this);
+//        DelegateAdapter delegateAdapter = new DelegateAdapter(layoutManager, false);
+//        mRecyclerView.setAdapter(delegateAdapter);
 
         //这里先不管，后面再添加
         //        GridLayoutHelper gridHelper = new GridLayoutHelper(5);
@@ -50,6 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         LinearLayoutHelper linearHelper = new LinearLayoutHelper(5);
-        delegateAdapter.addAdapter(new RVAdapter(this, linearHelper));
+//        delegateAdapter.addAdapter(new RVAdapter(this, linearHelper));
     }
 }
